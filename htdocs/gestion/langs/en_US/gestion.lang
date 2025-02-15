@@ -1,0 +1,42 @@
+# Translation file
+
+#
+# Generic
+#
+
+# Module label 'ModuleGestionName'
+ModuleGestionName = Gestion
+# Module description 'ModuleGestionDesc'
+ModuleGestionDesc = Gestion description
+
+#
+# Admin page
+#
+GestionSetup = Gestion setup
+Settings = Settings
+GestionSetupPage = Gestion setup page
+NewSection=New section
+GESTION_MYPARAM1 = My param 1
+GESTION_MYPARAM1Tooltip = My param 1 tooltip
+GESTION_MYPARAM2=My param 2
+GESTION_MYPARAM2Tooltip=My param 2 tooltip
+
+
+#
+# About page
+#
+About = About
+GestionAbout = About Gestion
+GestionAboutPage = Gestion about page
+
+#
+# Sample page
+#
+GestionArea = Home Gestion
+MyPageName = My page name
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
