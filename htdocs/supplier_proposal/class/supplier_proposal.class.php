@@ -629,7 +629,11 @@ class SupplierProposal extends CommonObject
 			$this->line->product_type = $type;
 			$this->line->special_code = $special_code;
 			$this->line->fk_parent_line = $fk_parent_line;
-			$this->line->fk_unit = $fk_unit;
+			if (isset($_POST['units'])) {
+				$this->line->fk_unit = $_POST['units'];
+			} else {
+				$this->line->fk_unit = $fk_unit;
+			}
 			$this->line->origin = $origin;
 			$this->line->origin_id = $origin_id;
 			$this->line->ref_fourn = $this->db->escape($ref_supplier);

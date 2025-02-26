@@ -1735,7 +1735,11 @@ class Commande extends CommonOrder
 			$this->line->origin = $origin;
 			$this->line->origin_id = $origin_id;
 			$this->line->fk_parent_line = $fk_parent_line;
-			$this->line->fk_unit = $fk_unit;
+			if (isset($_POST['units'])) {
+				$this->line->fk_unit = $_POST['units'];
+			} else {
+				$this->line->fk_unit = $fk_unit;
+			}
 
 			$this->line->date_start = $date_start;
 			$this->line->date_end = $date_end;

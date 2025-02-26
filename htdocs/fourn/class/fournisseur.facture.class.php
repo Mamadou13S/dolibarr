@@ -2286,7 +2286,11 @@ class FactureFournisseur extends CommonInvoice
 			$supplierinvoiceline->fk_parent_line = $fk_parent_line;
 			$supplierinvoiceline->origin = $this->origin;
 			$supplierinvoiceline->origin_id = $origin_id;
-			$supplierinvoiceline->fk_unit = $fk_unit;
+			if (isset($_POST['units'])) {
+				$supplierinvoiceline->fk_unit = $_POST['units'];
+			} else {
+				$supplierinvoiceline->fk_unit = $fk_unit;
+			}
 
 			// Multicurrency
 			$supplierinvoiceline->fk_multicurrency = $this->fk_multicurrency;

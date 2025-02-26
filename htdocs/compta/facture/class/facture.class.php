@@ -4100,7 +4100,11 @@ class Facture extends CommonInvoice
 			$this->line->origin_id = $origin_id;
 			$this->line->situation_percent = $situation_percent;
 			$this->line->fk_prev_id = $fk_prev_id;
-			$this->line->fk_unit = $fk_unit;
+			if (isset($_POST['units'])) {
+				$this->line->fk_unit = $_POST['units'];
+			} else {
+				$this->line->fk_unit = $fk_unit;
+			}
 
 			// infos margin
 			$this->line->fk_fournprice = $fk_fournprice;
